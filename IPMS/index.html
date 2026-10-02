@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Biblioteca</title>
+  <!-- Importação do arquivo de estilos CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>📚 Biblioteca Digital</h1>
+  </header>
+
+  <main class="container">
+    <!-- Formulário para cadastrar novos livros -->
+    <section class="card">
+      <h2>Cadastrar Novo Livro</h2>
+      <form id="form-cadastrar">
+        <input type="text" id="titulo" placeholder="Título do livro" required>
+        <input type="text" id="autor" placeholder="Autor" required>
+        <input type="number" id="ano" placeholder="Ano de Publicação" required>
+        <input type="text" id="genero" placeholder="Gênero" required>
+        <input type="number" id="exemplares" placeholder="Quantidade de Exemplares" value="1" min="1" required>
+        <button type="submit">Adicionar Livro</button>
+      </form>
+    </section>
+
+    <!-- Catálogo onde os livros serão inseridos dinamicamente pelo JS -->
+    <section class="card">
+      <h2>Catálogo de Livros</h2>
+      <div id="lista-livros" class="grid-livros"></div>
+    </section>
+  </main>
+
+  <!-- Importação do script JS (no final do body para carregar o HTML primeiro) -->
+  <script src="script.js"></script>
+</body>
+</html>
